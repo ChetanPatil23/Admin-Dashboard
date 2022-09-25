@@ -15,7 +15,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Chetan</span>
+        <span className="logo">Chetan Patil</span>
       </div>
       <hr />
       <div className="center">
