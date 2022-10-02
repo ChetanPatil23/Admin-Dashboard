@@ -31,6 +31,7 @@
         position: relative;
         .icon {
           font-size: 20px;
+          margin-right: 5px;
         }
         .counter {
           height: 15px;
@@ -45,7 +46,7 @@
           font-weight: bold;
           position: absolute;
           top: -5px;
-          right: -5px;
+          right: 0px;
         }
       }
     }
