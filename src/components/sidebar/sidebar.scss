@@ -1,6 +1,6 @@
 .sidebar {
   flex: 1;
-  border-right: 2px solid rgb(235, 235, 235);
+  // border-right: 2px solid #3b5998;
   min-height: 100vh;
   background-color: #fff;
   .top {
@@ -8,10 +8,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #3b5998;
+    border-right: none;
     .logo {
       font-size: 20px;
       font-weight: bold;
-      color: #6439ff;
+      color: white;
     }
   }
   hr {
@@ -20,6 +22,7 @@
   }
   .center {
     padding-left: 10px;
+    border-right: 2px solid rgb(235, 235, 235);
     ul {
       list-style: none;
       margin: 0;
