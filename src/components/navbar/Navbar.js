@@ -8,10 +8,15 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import PersonIcon from "@mui/icons-material/Person";
+import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, setIsOpen }) => {
   return (
     <div className="navbar">
+      <span className="arrowIcon" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <ArrowLeftOutlinedIcon /> : <ArrowRightOutlinedIcon />}
+      </span>
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search...." />

@@ -11,9 +11,10 @@ import WebStoriesIcon from "@mui/icons-material/WebStories";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
+  const sidebarToggle = isOpen ? "open" : "close";
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebarToggle}`}>
       <div className="top">
         <span className="logo">Chetan Patil</span>
       </div>
