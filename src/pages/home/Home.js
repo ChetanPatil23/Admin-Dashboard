@@ -1,4 +1,5 @@
 import KeyboardArrowUpOutlined from "@mui/icons-material/KeyboardArrowUpOutlined";
+import List from "../../components/table/List";
 import React, { useState } from "react";
 import Chart from "../../components/chart/Chart";
 import Featured from "../../components/featured/Featured";
@@ -37,6 +38,10 @@ const Home = () => {
         <div className="chart">
           <Featured />
           <Chart />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <List />
         </div>
         {showScroll && (
           <div className="scroll" onClick={scrollBack}>
