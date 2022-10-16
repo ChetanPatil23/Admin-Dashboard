@@ -1,5 +1,5 @@
 import KeyboardArrowUpOutlined from "@mui/icons-material/KeyboardArrowUpOutlined";
-import List from "../../components/table/List";
+import List from "../../components/table/Table";
 import React, { useState } from "react";
 import Chart from "../../components/chart/Chart";
 import Featured from "../../components/featured/Featured";

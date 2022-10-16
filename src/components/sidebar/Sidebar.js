@@ -11,12 +11,15 @@ import WebStoriesIcon from "@mui/icons-material/WebStories";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { Link, NavLink } from "react-router-dom";
 const Sidebar = ({ isOpen }) => {
   const sidebarToggle = isOpen ? "open" : "close";
   return (
     <div className={`sidebar ${sidebarToggle}`}>
       <div className="top">
-        <span className="logo">Chetan Patil</span>
+        <Link to="/" className='link'>
+          <span className="logo">Chetan Patil</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -27,10 +30,12 @@ const Sidebar = ({ isOpen }) => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <li>
-            <GroupIcon className="icon" />
-            <span>Users</span>
-          </li>
+          <Link to="/users" className="link">
+            <li>
+              <GroupIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
           <li>
             <CategoryIcon className="icon" />
             <span>Products</span>

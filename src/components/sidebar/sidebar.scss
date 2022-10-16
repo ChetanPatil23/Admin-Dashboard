@@ -9,6 +9,9 @@
     align-items: center;
     background-color: #3b5998;
     border-right: none;
+    .link {
+      text-decoration: none;
+    }
     .logo {
       font-size: 20px;
       font-weight: bold;
@@ -33,11 +36,20 @@
         margin-top: 15px;
         margin-bottom: 5px;
       }
+      .link {
+        text-decoration: none;
+      }
       li {
         display: flex;
         align-items: center;
         padding: 8px;
         cursor: pointer;
+        text-decoration: none;
+        .active {
+          span {
+            font-weight: bold;
+          }
+        }
         &:hover {
           background-color: lavender;
           .icon {

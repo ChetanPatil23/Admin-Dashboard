@@ -12,11 +12,15 @@ import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
+  const urlLink = window.location.href;
+  const hideIcon = urlLink.includes("users");
   return (
     <div className="navbar">
-      <span className="arrowIcon" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <ArrowLeftOutlinedIcon /> : <ArrowRightOutlinedIcon />}
-      </span>
+      {!hideIcon && (
+        <span className="arrowIcon" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <ArrowLeftOutlinedIcon /> : <ArrowRightOutlinedIcon />}
+        </span>
+      )}
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search...." />

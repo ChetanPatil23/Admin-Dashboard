@@ -1,0 +1,26 @@
+.datatable {
+  margin: 10px;
+  padding: 10px;
+  height: 560px;
+  .flex,
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .icon {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      color: rgba(66, 49, 85, 0.616);
+    }
+    .viewBtn {
+      color: rgb(87, 93, 184);
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    .delBtn {
+      color: rgb(235, 77, 77);
+      cursor: pointer;
+    }
+  }
+}
