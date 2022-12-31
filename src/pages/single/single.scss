@@ -11,10 +11,10 @@
         flex: 1;
         padding: 20px;
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.45);
-      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.45);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.45);
         position: relative;
-        .title{
-            margin-bottom: 5px;
+        .title {
+          margin-bottom: 5px;
         }
         .editBtn {
           position: absolute;
@@ -60,6 +60,14 @@
       .right {
         flex: 2;
       }
+    }
+  }
+  .bottom {
+    padding: 20px;
+    div {
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.45);
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.45);
+      margin-top: 10px;
     }
   }
 }

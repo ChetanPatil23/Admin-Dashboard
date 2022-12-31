@@ -11,13 +11,15 @@ import WebStoriesIcon from "@mui/icons-material/WebStories";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useGlobalContext } from "../../context/darkModeContext";
 const Sidebar = ({ isOpen }) => {
   const sidebarToggle = isOpen ? "open" : "close";
+  const { dispatch } = useGlobalContext();
   return (
     <div className={`sidebar ${sidebarToggle}`}>
       <div className="top">
-        <Link to="/" className='link'>
+        <Link to="/" className="link">
           <span className="logo">Chetan Patil</span>
         </Link>
       </div>
@@ -25,10 +27,12 @@ const Sidebar = ({ isOpen }) => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" className="link">
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
           <Link to="/users" className="link">
             <li>
@@ -78,8 +82,14 @@ const Sidebar = ({ isOpen }) => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "SET_DARK_MODE", payload: "dark" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "SET_DARK_MODE", payload: "light" })}
+        ></div>
       </div>
     </div>
   );

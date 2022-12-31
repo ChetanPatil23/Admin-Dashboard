@@ -8,7 +8,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Widget from "../../components/widget/Widget";
 import "./home.scss";
 
-const Home = () => {
+const Home = ({ setDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [showScroll, setShowScroll] = useState(false);
   var myScrollFunc = function () {
@@ -26,9 +26,14 @@ const Home = () => {
   window.addEventListener("scroll", myScrollFunc);
   return (
     <div className="home">
-      {isOpen && <Sidebar />}
+      {isOpen && <Sidebar setDarkMode={setDarkMode} />}
       <div className="home__container">
-        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navbar
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+        />
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />
@@ -37,7 +42,7 @@ const Home = () => {
         </div>
         <div className="chart">
           <Featured />
-          <Chart />
+          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>

@@ -10,8 +10,10 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import PersonIcon from "@mui/icons-material/Person";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { useGlobalContext } from "../../context/darkModeContext";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
+  const { dispatch } = useGlobalContext();
   const urlLink = window.location.href;
   const hideIcon = urlLink.includes("users");
   return (
@@ -32,7 +34,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon
+              className="icon mode"
+              onClick={() => dispatch({ type: "TOGGLE_DARK_MODE" })}
+            />
           </div>
           <div className="item">
             <FullscreenExitOutlinedIcon className="icon" />

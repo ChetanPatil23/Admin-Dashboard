@@ -4,10 +4,14 @@ import Login from "./pages/login/Login";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { Routes, Route } from "react-router-dom";
+import "./style.scss";
+import { useGlobalContext } from "./context/darkModeContext";
 
 function App() {
+  const { darkMode } = useGlobalContext();
+
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? "dark" : null}`}>
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />

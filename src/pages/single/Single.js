@@ -1,4 +1,6 @@
 import React from "react";
+import Chart from "../../components/chart/Chart";
+import Table from "../../components/table/Table";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./single.scss";
@@ -40,9 +42,16 @@ const Single = () => {
               </div>
             </div>
           </div>
-          <div className="right"></div>
+          <div className="right">
+            <Chart aspect={3 / 1} title="User spending (Last 6 Months)" />
+          </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <h2 className="title">Last Transactions</h2>
+          <div>
+            <Table />
+          </div>
+        </div>
       </div>
     </div>
   );

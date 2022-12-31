@@ -1,0 +1,43 @@
+.App.dark {
+  background-color: #222;
+  color: lavender;
+  .table {
+    background-color: #111;
+    .tableCell {
+      color: lavender;
+    }
+  }
+  .navbar {
+    color: lavender;
+    background-color: #111;
+    border-color: #111;
+  }
+  .sidebar {
+    color: lavender;
+    background-color: #111;
+    .top {
+      background-color: #111;
+      border-color: #111;
+    }
+    .center {
+      border-right: none;
+    }
+  }
+  .datatable {
+    .datagrid {
+      color: lavender;
+      background-color: #111;
+      .viewBtn {
+        color: blue;
+      }
+      .delBtn {
+        color: red;
+      }
+    }
+  }
+  .newContainer {
+    h2 {
+      color: lavender;
+    }
+  }
+}
